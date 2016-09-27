@@ -9,7 +9,7 @@ var request = require('request');
 
 router.route('/')
 
-// create a Project (accessed at POST http://localhost:8080/api/coins)
+// create a Project (accessed at POST /api/coins)
     .post(function (req, res)
     {
         console.log("POST: The data received is: ");
@@ -17,7 +17,7 @@ router.route('/')
 
     })
 
-    // get all the Projects (accessed at GET http://localhost:8080/api/coins)
+    // get all the Projects (accessed at GET /api/coins)
     .get(function (req, res)
     {
         console.log('getCOINS')

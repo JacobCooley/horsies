@@ -21,14 +21,16 @@ class Race extends React.Component {
     }
 
     updateData(){
-        fetch('http://coincap.io/front').then(function (response) {
-            return response.json();
+        fetch('/api/coins').then(function (response) {
+            console.log(response)
+            // return response.json();
         }).then(function (json) {
-            const coins = []
-            for (var i = 0; i < 10; i++) {
-                coins.push(json[ i ])
-            }
-            this.setState({ coins: coins });
+            // const coins = []
+            // for (var i = 0; i < 10; i++) {
+            //     console.log(json[i])
+            //     coins.push(json[ i ])
+            // }
+            // this.setState({ coins: coins });
         }.bind(this))
     }
 
@@ -51,7 +53,7 @@ class Race extends React.Component {
     }
 
     render() {
-        console.log('state',this.state);
+       // console.log('state',this.state);
 
         return (
             <div>
